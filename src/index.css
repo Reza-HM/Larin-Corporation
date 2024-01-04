@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: IRANSans;
+    src: url("/fonts/IRANSans/IRANSans.ttf") format("truetype");
+  }
+}
+
+*,
+body,
+html {
+  font-family: IRANSans;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  line-height: 1.6;
+  font-size: 1.6rem;
+  direction: rtl;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  user-select: none;
+}
+
+*,
+*::after,
+*::before {
+  outline: none;
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  transition: all 400ms ease;
+}
+
+/* CustomScrollbar.css */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #718096;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f7fafc;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #2d3748;
+}
+
+/* animations */
+
+@keyframes fade-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-left {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Define utility classes to apply the animations */
+.animate-fade-right {
+  animation: fade-right 1.5s ease-in;
+}
+
+.animate-fade-left {
+  animation: fade-left 1.5s ease-in;
+}
+
+.animate-fade-up {
+  animation: fade-up 1.5s ease-in;
+}
+
+.animate-fade-down {
+  animation: fade-down 1.5s ease-in;
+}
+
+/* Wave Effect  */
+
+/* Basic styling */
+.wave-element {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+/* Wave animation on hover */
+.wave-element::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.3);
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  opacity: 0;
+  transition: width 0.5s ease-out, height 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+/* Trigger the wave animation on hover */
+.wave-element:hover::after {
+  width: 0;
+  height: 0;
+  opacity: 1;
+}
