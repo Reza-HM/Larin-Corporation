@@ -6,6 +6,7 @@ import Projects from "../Components/Templates/Index/Projects";
 import Customers from "../Components/Templates/Index/Customers";
 import Consulting from "../Components/Templates/Index/Consulting";
 import Blog from "../Components/Templates/Index/Blog";
+import Collaborations from "../Components/Templates/Index/Collaborations";
 
 const Index: FC = () => {
   return (
@@ -20,6 +21,7 @@ const Index: FC = () => {
       <Consulting />
       <SectionHeader englishTitle="Blog" persianTitle="وبلاگ" />
       <Blog />
+      <Collaborations />
     </div>
   );
 };
