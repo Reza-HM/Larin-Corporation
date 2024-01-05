@@ -10,14 +10,14 @@ const SectionHeader: FC<SectionHeaderProps> = ({
   persianTitle,
 }) => {
   return (
-    <div className="flex justify-center relative mb-14">
-      <h2 className="font-IRANSans_Black text-3xl">{persianTitle}</h2>
-      <div className="absolute -top-6">
-        <span className="font-IRANSans_Black text-6xl text-opacity-10 text-stone-900">
+    <div className="flex justify-center relative mt-60">
+      <h2 className="font-IRANSans_Black text-5xl">{persianTitle}</h2>
+      <div className="absolute -top-8">
+        <span className="font-IRANSans_Black text-7xl text-opacity-10 text-stone-900">
           {englishTitle}
         </span>
       </div>
-      <div className="bg-orange-200 w-20 h-1.5 rounded-full absolute top-10"></div>
+      <div className="bg-orange-200 w-40 h-3 rounded-full absolute top-20"></div>
     </div>
   );
 };
