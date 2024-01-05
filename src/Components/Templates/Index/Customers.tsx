@@ -65,7 +65,7 @@ const Customers = () => {
                       alt=""
                     />
                     <div className="">
-                      <h3>شخص X</h3>
+                      <h3 className="font-bold">شخص X</h3>
                       <p>طراح گرافیک</p>
                     </div>
                   </div>
@@ -86,7 +86,7 @@ const Customers = () => {
                       alt=""
                     />
                     <div className="">
-                      <h3>شخص X</h3>
+                      <h3 className="font-bold">شخص X</h3>
                       <p>طراح گرافیک</p>
                     </div>
                   </div>
@@ -107,7 +107,7 @@ const Customers = () => {
                       alt=""
                     />
                     <div className="">
-                      <h3>شخص X</h3>
+                      <h3 className="font-bold">شخص X</h3>
                       <p>طراح گرافیک</p>
                     </div>
                   </div>
@@ -128,7 +128,7 @@ const Customers = () => {
                       alt=""
                     />
                     <div className="">
-                      <h3>شخص X</h3>
+                      <h3 className="font-bold">شخص X</h3>
                       <p>طراح گرافیک</p>
                     </div>
                   </div>
