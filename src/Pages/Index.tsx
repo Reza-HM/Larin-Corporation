@@ -5,6 +5,7 @@ import Services from "../Components/Templates/Index/Services";
 import Projects from "../Components/Templates/Index/Projects";
 import Customers from "../Components/Templates/Index/Customers";
 import Consulting from "../Components/Templates/Index/Consulting";
+import Blog from "../Components/Templates/Index/Blog";
 
 const Index: FC = () => {
   return (
@@ -17,6 +18,8 @@ const Index: FC = () => {
       <SectionHeader englishTitle="Customers" persianTitle="نظرات مشتریان" />
       <Customers />
       <Consulting />
+      <SectionHeader englishTitle="Blog" persianTitle="وبلاگ" />
+      <Blog />
     </div>
   );
 };
