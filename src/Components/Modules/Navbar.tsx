@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import { FaAngleDown } from "react-icons/fa";
 
-const Header = () => {
+const Navbar = () => {
   return (
     <div className="flex justify-between items-center p-20">
       <div className="flex items-center gap-20">
-        <img src="logo.png" className="w-72" alt="" />
+        <img src="/img/logo.png" className="w-72" alt="" />
         <ul className="flex items-center gap-16 text-stone-900  ">
           <li className="hover:border-b hover:border-orange-300 pb-1 duration-200">
             <Link to="/">صفحه اصلی</Link>
@@ -42,4 +42,4 @@ const Header = () => {
     </div>
   );
 };
-export default Header;
+export default Navbar;
