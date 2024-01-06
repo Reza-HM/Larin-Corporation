@@ -1,3 +1,4 @@
+import Blog from "./Pages/Blog";
 import Index from "./Pages/Index";
 import Projects from "./Pages/Projects";
 import Questions from "./Pages/Questions";
@@ -13,6 +14,7 @@ const routes: Route[] = [
   { path: "/services", element: <Services /> },
   { path: "/projects", element: <Projects /> },
   { path: "/questions", element: <Questions /> },
+  { path: "/blog", element: <Blog /> },
 ];
 
 export default routes;

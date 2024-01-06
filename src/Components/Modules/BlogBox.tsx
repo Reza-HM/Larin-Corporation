@@ -1,8 +1,15 @@
 import { GoTriangleLeft } from "react-icons/go";
+import { useLocation } from "react-router-dom";
 
 const BlogBox = () => {
+  const location = useLocation();
+
   return (
-    <div className="flex flex-col gap-8 overflow-hidden bg-white rounded-3xl shadow-xl hover:-translate-y-2 duration-500 cursor-pointer">
+    <div
+      className={`${
+        location.pathname === "/blog" ? "col-span-3" : ""
+      } flex flex-col gap-8 overflow-hidden bg-white rounded-3xl shadow-xl hover:-translate-y-2 duration-500 cursor-pointer`}
+    >
       <div className="flex items-center gap-8 border-b px-8 py-6 pb-4">
         <img
           src="/img/avatar-1.jpg"

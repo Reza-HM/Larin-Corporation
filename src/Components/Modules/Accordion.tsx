@@ -15,7 +15,7 @@ const Accordion: FC<AccordionProps> = ({ answer, question }) => {
         className="bg-white rounded-lg shadow-lg text-slate-500 text-2xl cursor-pointer flex items-center justify-between p-8"
         onClick={() => setIsExpanded(!isExpanded)}
       >
-        <p>سوال: {question}</p>
+        <p className="font-bold">سوال: {question}</p>
         {!isExpanded ? (
           <FaPlus className="text-3xl" />
         ) : (
