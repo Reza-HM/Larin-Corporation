@@ -1,4 +1,5 @@
 import Index from "./Pages/Index";
+import Projects from "./Pages/Projects";
 import Services from "./Pages/Services";
 
 interface Route {
@@ -9,6 +10,7 @@ interface Route {
 const routes: Route[] = [
   { path: "/", element: <Index /> },
   { path: "/services", element: <Services /> },
+  { path: "/projects", element: <Projects /> },
 ];
 
 export default routes;
