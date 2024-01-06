@@ -1,3 +1,4 @@
+import Aboutus from "./Pages/Aboutus";
 import Blog from "./Pages/Blog";
 import Index from "./Pages/Index";
 import Projects from "./Pages/Projects";
@@ -15,6 +16,7 @@ const routes: Route[] = [
   { path: "/projects", element: <Projects /> },
   { path: "/questions", element: <Questions /> },
   { path: "/blog", element: <Blog /> },
+  { path: "/aboutus", element: <Aboutus /> },
 ];
 
 export default routes;
