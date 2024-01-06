@@ -1,6 +1,5 @@
 import BreadCrumb from "../Components/Modules/BreadCrumb";
 import SectionHeader from "../Components/Modules/SectionHeader";
-import Service from "../Components/Modules/Service";
 
 import IndexProjects from "../Components/Templates/Index/Projects";
 
