@@ -5,7 +5,9 @@ const Navbar = () => {
   return (
     <div className="flex justify-between items-center p-20">
       <div className="flex items-center gap-20">
-        <img src="/img/logo.png" className="w-72" alt="" />
+        <Link to="/">
+          <img src="/img/logo.png" className="w-72" alt="" />
+        </Link>
         <ul className="flex items-center gap-16 text-stone-900  ">
           <li className="hover:border-b hover:border-orange-300 pb-1 duration-200">
             <Link to="/">صفحه اصلی</Link>
