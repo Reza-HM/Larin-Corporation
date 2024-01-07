@@ -27,7 +27,7 @@ const Register = () => {
             />
             <button className="w-full bg-stone-800 text-white rounded-full p-4 hover:bg-orange-300 hover:text-stone-800 duration-300">
               ثبت نام
-            </button>
+            </button> 
           </form>
           <div className="flex flex-col gap-4 text-xl text-stone-700 font-bold">
             <p className="flex items-center gap-4">
