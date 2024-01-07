@@ -1,5 +1,5 @@
 import { GoTriangleLeft } from "react-icons/go";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const BlogBox = () => {
   const location = useLocation();
@@ -24,7 +24,7 @@ const BlogBox = () => {
       <div className="flex flex-col gap-4 px-6 py-4">
         <div className="flex items-center gap-2">
           <GoTriangleLeft className="text-5xl text-amber-700/60" />{" "}
-          <h3 className="font-bold text-stone-900">پرفروش ترین مبل ایران</h3>
+          <Link to="/article-details/1" className="font-bold text-stone-900">پرفروش ترین مبل ایران</Link>
         </div>
         <p className="text-stone-600">
           لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و ...
