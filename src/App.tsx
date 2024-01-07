@@ -1,16 +1,19 @@
 import { FC } from "react";
-import { RouteObject, useRoutes } from "react-router-dom";
+import { RouteObject, useLocation, useRoutes } from "react-router-dom";
 import routes from "./routes";
 import Header from "./Components/Modules/Navbar";
 import Footer from "./Components/Modules/Footer";
 
 const App: FC = () => {
   const router = useRoutes(routes as RouteObject[]);
+  const location = useLocation();
   return (
     <div className="">
-      <Header />
+      {!location.pathname.includes("signin") &&
+        !location.pathname.includes("signup") && <Header />}
       {router}
-      <Footer />
+      {!location.pathname.includes("signin") &&
+        !location.pathname.includes("signup") && <Footer />}
     </div>
   );
 };
