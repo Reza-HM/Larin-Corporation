@@ -38,9 +38,9 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      <div className="flex justify-center items-center bg-stone-900 text-orange-200 hover:bg-orange-200 hover:text-stone-900 duration-300 rounded-full py-4 px-16 cursor-pointer font-bold">
+      <Link to="/signup" className="flex justify-center items-center bg-stone-900 text-orange-200 hover:bg-orange-200 hover:text-stone-900 duration-300 rounded-full py-4 px-16 cursor-pointer font-bold">
         ورود | ثبت نام
-      </div>
+      </Link>
     </div>
   );
 };
