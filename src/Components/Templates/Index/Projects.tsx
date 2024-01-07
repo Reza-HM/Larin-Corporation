@@ -6,7 +6,7 @@ const Projects = () => {
       <div className="flex items-center gap-8">
         <div className="flex-1">
           <Link
-            to="/projects"
+            to="/project-details/1"
             className="group relative flex justify-center h-48 items-end overflow-hidden rounded-xl bg-gray-100 shadow-lg md:h-96"
           >
             <img
@@ -23,7 +23,7 @@ const Projects = () => {
         </div>
         <div className="flex-[2]">
           <Link
-            to="/projects"
+            to="/project-details/1"
             className="group relative flex justify-center h-48 items-end overflow-hidden rounded-xl bg-gray-100 shadow-lg md:h-96"
           >
             <img
@@ -42,7 +42,7 @@ const Projects = () => {
       <div className="flex items-center gap-8 mt-8">
         <div className="flex-[2]">
           <Link
-            to="/projects"
+            to="/project-details/1"
             className="group relative flex justify-center h-48 items-end overflow-hidden rounded-xl bg-gray-100 shadow-lg md:h-96"
           >
             <img
@@ -59,7 +59,7 @@ const Projects = () => {
         </div>
         <div className="flex-1">
           <Link
-            to="/projects"
+            to="/project-details/1"
             className="group relative flex justify-center h-48 items-end overflow-hidden rounded-xl bg-gray-100 shadow-lg md:h-96"
           >
             <img
