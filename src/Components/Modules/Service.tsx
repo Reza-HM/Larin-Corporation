@@ -7,7 +7,7 @@ const Service = () => {
   return (
     <div
       className={`${
-        location.pathname === "/services" ? "col-span-4" : ""
+        location.pathname === "/services" ? "col-span-12 md:col-span-4" : ""
       } p-8 bg-white text-stone-800 rounded-2xl shadow-lg flex flex-col gap-6 hover:-translate-y-2 duration-500 cursor-pointer`}
     >
       <img src="/img/17.png" className="w-32" alt="" />
