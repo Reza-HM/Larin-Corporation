@@ -9,7 +9,7 @@ import "swiper/css/navigation";
 const Header = () => {
   return (
     <div className="container mt-20 max-w-screen-2xl">
-      <div className="flex items-center gap-8 relative">
+      <div className="flex items-center flex-wrap gap-8 relative">
         <div className="bg-stone-900 absolute -top-15 left-0 h-[500px] w-[200px] lg:w-[400px] rounded-b-3xl"></div>
 
         <div className="flex-1">
