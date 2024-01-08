@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
-    <div className="min-h-screen py-8 flex flex-col justify-center sm:py-20">
+    <div className="container min-h-screen py-8 flex flex-col justify-center sm:py-20">
       <div className="relative py-3 w-full sm:max-w-2xl sm:mx-auto">
         <div className="absolute inset-0 bg-stone-900 transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
         <div className="flex flex-col gap-16 items-center relative px-4 py-10 bg-gradient-to-t from-orange-100 to-[#f5f1e4] sm:rounded-3xl sm:p-28">
