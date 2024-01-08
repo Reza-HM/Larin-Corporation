@@ -145,8 +145,8 @@ const ProjectDetails = () => {
             لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
           </p>
         </div>
-        <div className="flex items-center gap-4">
-          <div className="flex-1">
+        <div className="flex items-center flex-wrap gap-4">
+          <div className="w-full sm:w-1/3 sm:flex-1">
             <Link
               to="/project-details/1"
               className="group relative flex justify-center h-48 items-end overflow-hidden rounded-xl bg-gray-100 shadow-lg md:h-96"
@@ -163,7 +163,7 @@ const ProjectDetails = () => {
               </span>
             </Link>
           </div>
-          <div className="flex-1">
+          <div className="w-full sm:w-1/3 sm:flex-1">
             <Link
               to="/project-details/1"
               className="group relative flex justify-center h-48 items-end overflow-hidden rounded-xl bg-gray-100 shadow-lg md:h-96"
@@ -180,7 +180,7 @@ const ProjectDetails = () => {
               </span>
             </Link>
           </div>
-          <div className="flex-1">
+          <div className="w-full sm:w-1/3 sm:flex-1">
             <Link
               to="/project-details/1"
               className="group relative flex justify-center h-48 items-end overflow-hidden rounded-xl bg-gray-100 shadow-lg md:h-96"
