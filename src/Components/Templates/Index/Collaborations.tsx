@@ -2,8 +2,8 @@ const Collaborations = () => {
   return (
     <div className="bg-orange-100 pt-40 pb-20">
       <div className="container max-w-screen-2xl">
-        <div className="grid grid-cols-1 md:grid-cols-12 items-center gap-20">
-          <div className="col-span-12 lg:col-span-4">
+        <div className="flex items-center flex-wrap gap-20">
+          <div className="w-full lg:w-1/4 lg:flex-1 ">
             <div className="flex justify-between items-center">
               <div className="flex flex-col gap-8">
                 <h2 className="font-IRANSans_Black text-5xl">
@@ -27,8 +27,8 @@ const Collaborations = () => {
               </svg>
             </div>
           </div>
-          <div className="col-span-12 lg:col-span-8">
-            <div className="flex items-center justify-between">
+          <div className="w-full lg:w-3/4 lg:flex-[3] ">
+            <div className="flex items-center flex-wrap justify-center lg:justify-between">
               <img
                 src="/img/bime-logo.png"
                 className="cursor-pointer w-48 h-48 grayscale hover:grayscale-0 duration-300"

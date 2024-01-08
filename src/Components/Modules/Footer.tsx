@@ -15,8 +15,8 @@ const Footer = () => {
         <IoArrowUp className="text-4xl" />
       </div>
       <div className="container max-w-screen-2xl p-10">
-        <div className="grid grid-cols-12 mt-8 gap-8 leading-8">
-          <div className="grid-cols-12 lg:col-span-5">
+        <div className="flex items-center flex-wrap mt-8 gap-8 leading-8">
+          <div className="w-full lg:w-5/12 lg:flex-[3]">
             <img src="/img/logo-footer.png" loading="lazy" alt="" />
             <p className="text-justify mt-16 text-2xl leading-loose">
               لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
@@ -26,7 +26,8 @@ const Footer = () => {
               زیادی در شصت و سه درصد گذشته حال و آینده است.
             </p>
           </div>
-          <div className="grid-cols-12 sm:col-span-6 md:col-span-4 lg:col-span-2 text-right md:text-center flex flex-col gap-12">
+
+          <div className="w-full lg:w-2/12 lg:flex-1 text-center lg:text-right md:text-center flex flex-col items-center gap-12">
             {" "}
             <h3>دسترسی سریع</h3>
             <ul className="flex flex-col gap-6">
@@ -48,7 +49,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="grid-cols-12 sm:col-span-6 md:col-span-4 lg:col-span-2 text-right md:text-center flex flex-col gap-12">
+          <div className="w-full lg:w-2/12 lg:flex-1 text-center lg:text-right md:text-center flex flex-col items-center gap-12">
             <h3 className="text-3xl">خدمات شرکت</h3>
             <ul className="flex flex-col gap-6">
               <li className="text-2xl">
@@ -69,7 +70,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="grid-cols-12 md:col-span-4 lg:col-span-3 flex flex-col gap-8">
+          <div className="w-full lg:w-3/12 lg:flex-[2] flex flex-col gap-8">
             <h3 className="text-3xl">عضویت در خبرنامه</h3>
             <div className="flex relative bg-white py-2 px-8 rounded-lg shadow-lg text-stone-900">
               <button className="absolute right-0 top-1 py-2 px-2 bg-orange-300 font-bold rounded-lg">
@@ -77,7 +78,7 @@ const Footer = () => {
               </button>
               <input type="text" className="bg-unset w-full h-full pr-20" />
             </div>
-            <div className="flex items-center justify-center gap-8 mt-2">
+            <div className="flex items-center flex-wrap justify-center gap-8 mt-2">
               <img src="/img/enamad_logo.png" loading="lazy" alt="" />
               <img src="/img/samandehi_logo.png" loading="lazy" alt="" />
             </div>

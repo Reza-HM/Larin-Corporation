@@ -9,15 +9,15 @@ import "swiper/css/navigation";
 const Header = () => {
   return (
     <div className="container mt-20 max-w-screen-2xl">
-      <div className="flex items-center flex-wrap gap-8 relative">
-        <div className="bg-stone-900 absolute -top-15 left-0 h-[500px] w-[200px] lg:w-[400px] rounded-b-3xl"></div>
+      <div className="container flex justify-center items-center flex-wrap gap-8 relative">
+        <div className="bg-stone-900 hidden md:block absolute -top-15 left-0 h-[500px] w-[200px] lg:w-[400px] rounded-b-3xl"></div>
 
-        <div className="flex-1">
-          <div className="flex flex-col gap-16">
+        <div className="md:flex-1">
+          <div className="flex flex-col gap-16 items-center md:items-stretch">
             <div className="text-2xl font-bold bg-orange-200 w-60 rounded-full p-4 text-center shadow-md cursor-text">
               شرکت صندلی لارین
             </div>
-            <h1 className="text-6xl font-IRANSans_Black">
+            <h1 className="text-6xl font-IRANSans_Black text-center md:text-start">
               دنیـــــای صنـــدلــــی هـــای مینیمــــال
             </h1>
             <p className="text-justify max-w-2xl leading-loose text-stone-600">
@@ -48,7 +48,7 @@ const Header = () => {
           </div>
         </div>
         <Swiper
-          className="!flex-[2] rounded-3xl ml-20"
+          className="md:!flex-[2] rounded-3xl lg:ml-20"
           loop={true}
           slidesPerView={1}
           navigation={true}

@@ -10,8 +10,8 @@ const Customers = () => {
   return (
     <div className="mt-20 rounded-3xl bg-gradient-to-t from-orange-100">
       <div className="container p-20 max-w-screen-2xl">
-        <div className="grid grid-cols-12 gap-16">
-          <div className="col-span-5 flex flex-col gap-16">
+        <div className="flex items-center flex-wrap gap-16">
+          <div className="w-full flex-1 lg:w-1/2 flex flex-col gap-16">
             <h1 className="font-IRANSans_Black text-5xl">
               از زبان مشتریان ما بشنوید...
             </h1>
@@ -41,7 +41,7 @@ const Customers = () => {
               </Link>
             </div>
           </div>
-          <div className="col-span-7">
+          <div className="w-full flex-[2] lg:w-2/3">
             <Swiper
               effect={"cube"}
               grabCursor={true}
