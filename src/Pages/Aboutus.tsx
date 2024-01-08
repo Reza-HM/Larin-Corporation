@@ -11,8 +11,8 @@ const Aboutus = () => {
         persianTitle="درباره ما
       "
       />
-      <div className="my-40 flex items-center gap-8">
-        <div className="flex-1 flex flex-col gap-12 border-r-2 pr-11 border-r-gray-300">
+      <div className="container my-40 flex items-center flex-wrap gap-12">
+        <div className="w-full lg:w-1/2 lg:flex-1 flex flex-col items-center justify-center gap-12 border-r-2 pr-11 border-r-gray-300">
           <div className="flex flex-col gap-4 relative">
             <div className="absolute -right-20 top-0 w-16 h-16 flex justify-center items-center rounded-[50%] bg-white">
               <div className="w-10 h-10 flex justify-center items-center rounded-[50%] bg-black">
@@ -68,7 +68,7 @@ const Aboutus = () => {
             </p>
           </div>
         </div>
-        <div className="flex-1 relative py-4 sm:mx-auto">
+        <div className="w-full lg:w-1/2 lg:flex-1 relative py-4 sm:mx-auto">
           <div className="absolute inset-0 bg-stone-900 transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
           <div className="relative bg-gradient-to-t from-orange-100 to-[#f5f1e4] sm:rounded-3xl">
             <div className="max-w-md mx-auto">
