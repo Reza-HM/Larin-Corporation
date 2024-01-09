@@ -6,7 +6,6 @@ import projectsReducer, { ProjectsState } from "./store/projects";
 import questionsReducer, { QuestionsState } from "./store/questions";
 import usersReducer, { AuthState } from "./store/users";
 
-// Define the root state type
 interface RootState {
   articles: ArticlesState;
   contacts: ContactsState;
@@ -16,7 +15,6 @@ interface RootState {
   users: AuthState;
 }
 
-// Create a map of reducers
 const rootReducer: Reducer<RootState> = combineReducers({
   articles: articlesReducer,
   contacts: contactsReducer,
