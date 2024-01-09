@@ -31,7 +31,7 @@ export const addContactToServer = createAsyncThunk<Contact, Contact>(
   }
 );
 
-interface ContactsState {
+export interface ContactsState {
   contacts: Contact[];
 }
 

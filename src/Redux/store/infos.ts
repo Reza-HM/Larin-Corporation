@@ -15,11 +15,11 @@ export const fetchInfos = createAsyncThunk<Infos, string>(
   async (url: string) => {
     const response = await fetch(url);
     const data = await response.json();
-    return data as Infos; 
+    return data as Infos;
   }
 );
 
-interface InfosState {
+export interface InfosState {
   infos: Infos | null;
   loading: boolean;
   error: string | null;

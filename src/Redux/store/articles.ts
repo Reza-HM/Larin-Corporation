@@ -19,7 +19,7 @@ export const getArticlesFromServer = createAsyncThunk<Article[], string>(
   }
 );
 
-interface ArticlesState {
+export interface ArticlesState {
   articles: Article[];
 }
 

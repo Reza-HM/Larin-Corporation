@@ -15,7 +15,7 @@ export const getQuestionsFromServer = createAsyncThunk<Question[], string>(
   }
 );
 
-interface QuestionsState {
+export interface QuestionsState {
   questions: Question[];
 }
 

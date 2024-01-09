@@ -17,7 +17,7 @@ export const getServicesFromServer = createAsyncThunk<Service[], string>(
   }
 );
 
-interface ServicesState {
+export interface ServicesState {
   services: Service[];
 }
 

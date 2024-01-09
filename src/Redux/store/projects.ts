@@ -18,7 +18,7 @@ export const getProjectsFromServer = createAsyncThunk<Project[], string>(
   }
 );
 
-interface ProjectsState {
+export interface ProjectsState {
   projects: Project[];
 }
 
