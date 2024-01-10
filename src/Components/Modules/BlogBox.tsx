@@ -1,7 +1,15 @@
+import { FC } from "react";
 import { GoTriangleLeft } from "react-icons/go";
 import { Link, useLocation } from "react-router-dom";
 
-const BlogBox = () => {
+interface BlogBoxProps {
+  title: string;
+  description: string;
+  img: string;
+  author: string;
+}
+
+const BlogBox: FC<BlogBoxProps> = ({ description, img, title, author }) => {
   const location = useLocation();
 
   return (
@@ -17,20 +25,20 @@ const BlogBox = () => {
           alt=""
         />
         <div className="flex flex-col gap-4">
-          <h3 className="font-bold">شخص X</h3>
+          <h3 className="font-bold">{author}</h3>
           <p className="text-xl text-stone-600">طراح گرافیک</p>
         </div>
       </div>
       <div className="flex flex-col gap-4 px-6 py-4">
         <div className="flex items-center gap-2">
           <GoTriangleLeft className="text-5xl text-amber-700/60" />{" "}
-          <Link to="/article-details/1" className="font-bold text-stone-900">پرفروش ترین مبل ایران</Link>
+          <Link to="/article-details/1" className="font-bold text-stone-900">
+            {title}{" "}
+          </Link>
         </div>
-        <p className="text-stone-600">
-          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و ...
-        </p>
+        <p className="text-stone-600">{description}</p>
       </div>
-      <img src="/img/blog-9.jpg" alt="" />
+      <img src={img} className="h-full" alt="" />
     </div>
   );
 };

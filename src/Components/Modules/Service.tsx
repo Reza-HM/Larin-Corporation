@@ -19,7 +19,7 @@ const Service: FC<ServicesProps> = ({ title, description }) => {
       <img src="/img/17.png" className="w-32" alt="" />
       <div className="flex items-center gap-2">
         <GoTriangleLeft className="text-5xl text-amber-700/60" />{" "}
-        <h3 className="font-bold text-stone-900">{title}</h3>
+        <h3 className="font-bold text-stone-900 line-clamp-1">{title}</h3>
       </div>
       <p className="text-stone-900">{description}</p>
     </div>

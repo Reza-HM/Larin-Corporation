@@ -86,7 +86,7 @@
     {
       "id": 1,
       "title": "تحول صندلی‌های ارگونومیک",
-      "img": "https://example.com/ergonomic_chairs.jpg",
+      "img": "/img/blog-1.jpg",
       "description": "بررسی تاریخچه و پیشرفت‌ها در طراحی‌های صندلی‌های ارگونومیک.",
       "body": "متن نمونه ...",
       "author": "جان دو",
@@ -95,7 +95,7 @@
     {
       "id": 2,
       "title": "مواد پایدار در تولید میزهای مدرن",
-      "img": "https://example.com/sustainable_tables.jpg",
+      "img": "/img/blog-2.jpg",
       "description": "بررسی استفاده از مواد دوستدار محیط‌زیست در تولید میزهای معاصر.",
       "body": "متن نمونه ...",
       "author": "جین اسمیت",
@@ -104,7 +104,7 @@
     {
       "id": 3,
       "title": "هنر ساخت صندلی‌های دست‌ساز",
-      "img": "https://example.com/handmade_chairs.jpg",
+      "img": "/img/blog-4.jpg",
       "description": "کشف هنر ساخت صندلی‌های دست‌ساز.",
       "body": "متن نمونه ...",
       "author": "امیلی جانسون",
@@ -113,7 +113,7 @@
     {
       "id": 4,
       "title": "طراحی‌های نوآورانه برای فضاهای کوچک میزها",
-      "img": "https://example.com/small_spaces_tables.jpg",
+      "img": "/img/blog-9.jpg",
       "description": "بررسی راهکارهای میزهای صرفه‌جویی در فضا برای زندگی مدرن.",
       "body": "متن نمونه ...",
       "author": "مایکل براون",
@@ -122,7 +122,7 @@
     {
       "id": 5,
       "title": "علم پشت صندلی‌های راحت",
-      "img": "https://example.com/comfortable_chairs.jpg",
+      "img": "/img/blog-1.jpg",
       "description": "فهم اصول ارگونومیکی که صندلی‌های راحت را تعریف می‌کنند.",
       "body": "متن نمونه ...",
       "author": "صوفیا ویلسون",
@@ -131,7 +131,7 @@
     {
       "id": 6,
       "title": "روند‌های انقلابی در طراحی میز",
-      "img": "https://example.com/revolutionary_tables.jpg",
+      "img": "/img/blog-9.jpg",
       "description": "برجسته‌سازی آخرین روندهای شکل‌دهی آینده طراحی میزها.",
       "body": "متن نمونه ...",
       "author": "دیوید گارسیا",
@@ -140,7 +140,8 @@
     {
       "id": 7,
       "title": "نقش هوش مصنوعی در تولید صندلی",
-      "img": "https://example.com/ai_chair_manufacturing.jpg",
+      "img": "/img/blog-2.jpg",
+
       "description": "بررسی ادغام هوش مصنوعی در تولید صندلی.",
       "body": "متن نمونه ...",
       "author": "الیویا مارتینز",
@@ -149,7 +150,8 @@
     {
       "id": 8,
       "title": "تأثیرات فرهنگی بر طرح‌های میزها",
-      "img": "https://example.com/cultural_table_designs.jpg",
+      "img": "/img/blog-1.jpg",
+
       "description": "بررسی چگونگی تأثیرات فرهنگ‌های مختلف بر ظاهر طراحی میزها.",
       "body": "متن نمونه ...",
       "author": "دانیل لی",
@@ -158,7 +160,8 @@
     {
       "id": 9,
       "title": "آینده صندلی‌های هوشمند",
-      "img": "https://example.com/smart_chairs_future.jpg",
+      "img": "/img/blog-2.jpg",
+
       "description": "پیش‌بینی امکانات فناوری هوشمند مدمج در صندلی‌ها.",
       "body": "متن نمونه ...",
       "author": "اما براون",
@@ -167,7 +170,8 @@
     {
       "id": 10,
       "title": "روند‌های کم‌حجم در تولید میزها",
-      "img": "https://example.com/minimalist_tables.jpg",
+      "img": "/img/blog-9.jpg",
+
       "description": "بررسی روند صعودی اصول طراحی کم‌حجم در تولید میزها.",
       "body": "متن نمونه ...",
       "author": "اندرو تیلور",
