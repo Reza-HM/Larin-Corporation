@@ -9,33 +9,45 @@ interface Service {
 }
 
 export const getServicesFromServer = createAsyncThunk<Service[], string>(
-  "services/getServicesFromServer",
-  async (url: string) => {
-    const response = await fetch(url);
+  "services/getServices",
+  async (apiUrl: string) => {
+    const response = await fetch(apiUrl);
     const data = await response.json();
-    return data as Service[]; // Assuming the response data is an array of articles
+    return data;
   }
 );
-
 export interface ServicesState {
   services: Service[];
+  loading: "idle" | "pending" | "fulfilled" | "rejected";
+  error: string | null;
 }
 
 const initialState: ServicesState = {
   services: [],
+  loading: "idle",
+  error: null,
 };
 
 const slice = createSlice({
   name: "services",
   initialState,
-  reducers: {},
+  reducers: {}, // other synchronous reducers if any
   extraReducers: (builder) => {
+    builder.addCase(getServicesFromServer.pending, (state) => {
+      state.loading = "pending";
+      state.error = null;
+    });
     builder.addCase(
       getServicesFromServer.fulfilled,
       (state, action: PayloadAction<Service[]>) => {
+        state.loading = "fulfilled";
         state.services = action.payload;
       }
     );
+    builder.addCase(getServicesFromServer.rejected, (state, action) => {
+      state.loading = "rejected";
+      state.error = action.error.message ?? "An error occurred";
+    });
   },
 });
 

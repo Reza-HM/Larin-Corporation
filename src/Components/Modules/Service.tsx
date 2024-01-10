@@ -1,7 +1,13 @@
+import { FC } from "react";
 import { GoTriangleLeft } from "react-icons/go";
 import { useLocation } from "react-router-dom";
 
-const Service = () => {
+interface ServicesProps {
+  title: string;
+  description: string;
+}
+
+const Service: FC<ServicesProps> = ({ title, description }) => {
   const location = useLocation();
 
   return (
@@ -13,12 +19,9 @@ const Service = () => {
       <img src="/img/17.png" className="w-32" alt="" />
       <div className="flex items-center gap-2">
         <GoTriangleLeft className="text-5xl text-amber-700/60" />{" "}
-        <h3 className="font-bold text-stone-900">شخصی سازی آسان</h3>
+        <h3 className="font-bold text-stone-900">{title}</h3>
       </div>
-      <p className="text-stone-900">
-        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده
-        طراحان گرافیک و...
-      </p>
+      <p className="text-stone-900">{description}</p>
     </div>
   );
 };
