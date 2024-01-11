@@ -28,9 +28,13 @@ export const registerUser = createAsyncThunk<User, User>(
   }
 );
 
-export const loginUser = createAsyncThunk<User | undefined, User>(
+// authSliceFile.ts
+export const loginUser = createAsyncThunk<
+  User | undefined,
+  { username: string; password: string }
+>(
   "users/loginUser",
-  async (credentials: User) => {
+  async (credentials: { username: string; password: string }) => {
     const response = await fetch("http://localhost:3000/users");
     const data = await response.json();
     const user = data.find(
@@ -38,7 +42,26 @@ export const loginUser = createAsyncThunk<User | undefined, User>(
         user.username === credentials.username &&
         user.password === credentials.password
     );
-    return user as User | undefined;
+
+    if (user) {
+      const newToken = crypto.randomUUID();
+
+      await fetch(`http://localhost:3000/users/${user.id}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ token: newToken }),
+      });
+
+      // Update the user's token in the local storage
+      localStorage.setItem("token", newToken);
+
+      // Return the user with the updated token
+      return { ...user, token: newToken } as User;
+    }
+
+    return undefined;
   }
 );
 
