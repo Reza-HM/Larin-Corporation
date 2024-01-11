@@ -242,7 +242,6 @@
     "phone": "+98 21 8765 4321",
     "email": "info@tekmel-furniture.com"
   },
-  "users": [{}],
   "services": [
     {
       "id": 1,
@@ -313,6 +312,29 @@
       "img": "https://example.com/material_selection_service.jpg",
       "description": "ارائه مشاوره در انتخاب مواد مناسب برای ساخت صندلی و میز با توجه به استفاده و استحکام مورد نظر.",
       "other_field": "اطلاعات دیگر درباره خدمت"
+    }
+  ],
+  "users": [
+    {
+      "username": "RezaHM",
+      "email": "hamzeiamir205@gmail.com",
+      "password": "larrybird",
+      "token": "b2d2b169-4851-4fcc-b4f9-7f5b4428f28d",
+      "id": 1
+    },
+    {
+      "username": "Dexter_Morgan",
+      "email": "dexter@gmail.com",
+      "password": "tonightisthenight",
+      "token": "80a2ad27-f47d-4c76-b3b9-ad02c6ef1292",
+      "id": 2
+    },
+    {
+      "username": "Gregory House",
+      "email": "GregHouse@gmail.com",
+      "password": "GregHouse",
+      "token": "6bbc5387-e6e4-4d3b-8412-8e31486b837e",
+      "id": 3
     }
   ]
 }

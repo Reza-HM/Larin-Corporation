@@ -1,15 +1,46 @@
 import { Link } from "react-router-dom";
 import { FaAngleDown } from "react-icons/fa";
 import { FaBars } from "react-icons/fa6";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import DrawerMenu from "./DrawerMenu";
+
+interface User {
+  username: string;
+  email: string;
+  password: string;
+  token: string;
+}
 
 const Navbar = () => {
   const [isDrawerMenuOpened, setIsDrawerMenuOpened] = useState(false);
+  const [users, setUsers] = useState<User[]>([]);
+  const [username, setUsername] = useState<string>("");
+  const token = localStorage.getItem("token");
+
+  useEffect(() => {
+    const fetchUserData = async () => {
+      try {
+        const res = await fetch("http://localhost:3000/users");
+        const result: User[] = await res.json();
+        setUsers(result);
+      } catch (error) {
+        console.error("Error fetching user data:", error);
+      }
+    };
+    fetchUserData();
+  }, []);
+
+  useEffect(() => {
+    const user = users.find((user) => user.token === token);
+    if (user) {
+      setUsername(user.username);
+    }
+  }, [users, token]);
+
   return (
     <>
       <div className="flex justify-center xl:justify-between gap-4 flex-wrap items-center p-20">
-        <div className="flex items-cente justify-center lg:justify-between flex-wrap gap-4 lg:gap-20">
+        <div className="flex items-center justify-center lg:justify-between flex-wrap gap-4 lg:gap-20">
           <div
             className="lg:hidden"
             onClick={() => setIsDrawerMenuOpened(true)}
@@ -49,12 +80,18 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <Link
-          to="/signup"
-          className="flex justify-center items-center w-60 bg-stone-900 text-orange-200 hover:bg-orange-200 hover:text-stone-900 duration-300 rounded-full py-2 px-8 cursor-pointer font-bold"
-        >
-          ورود | ثبت نام
-        </Link>
+        {!token ? (
+          <Link
+            to="/signup"
+            className="flex justify-center items-center w-60 bg-stone-900 text-orange-200 hover:bg-orange-200 hover:text-stone-900 duration-300 rounded-full py-2 px-8 cursor-pointer font-bold"
+          >
+            ورود | ثبت نام
+          </Link>
+        ) : (
+          <div className="flex justify-center items-center w-60 bg-stone-900 text-orange-200 hover:bg-orange-200 hover:text-stone-900 duration-300 rounded-full py-2 px-8 cursor-pointer font-bold">
+            {username}{" "}
+          </div>
+        )}
       </div>
       {isDrawerMenuOpened && <DrawerMenu onClose={setIsDrawerMenuOpened} />}
     </>

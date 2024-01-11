@@ -34,7 +34,7 @@ const Contactus = () => {
 
   const sendMessage = (event: React.FormEvent) => {
     event.preventDefault();
-    const data = dispatch(
+    dispatch(
       addContactToServer({
         id: crypto.randomUUID(),
         subject: contactForm.subject,
@@ -42,7 +42,6 @@ const Contactus = () => {
         body: contactForm.body,
       })
     );
-    console.log(data);
     swal({
       title: "پیام شما با موفقیت ارسال شد.",
       icon: "success",

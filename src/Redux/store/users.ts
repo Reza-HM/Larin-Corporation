@@ -1,8 +1,6 @@
 import { PayloadAction, createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 interface User {
-  id: string;
-  name: string;
   username: string;
   email: string;
   password: string;
@@ -19,7 +17,13 @@ export const registerUser = createAsyncThunk<User, User>(
       },
       body: JSON.stringify(newUser),
     });
+
+    if (!response.ok) {
+      throw new Error(`Error: ${response.status} - ${response.statusText}`);
+    }
+
     const data = await response.json();
+    localStorage.setItem("token", newUser.token);
     return data as User;
   }
 );
