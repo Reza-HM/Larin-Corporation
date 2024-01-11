@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface Contact {
-  id: number;
+  id: string;
   subject: string;
   email: string;
   body: string;
@@ -27,7 +27,7 @@ export const addContactToServer = createAsyncThunk<Contact, Contact>(
       body: JSON.stringify(newContact),
     });
     const data = await response.json();
-    return data as Contact; // Assuming the response data is the created contact object
+    return data as Contact;
   }
 );
 

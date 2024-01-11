@@ -1,8 +1,61 @@
 import { Link } from "react-router-dom";
 import BreadCrumb from "../Components/Modules/BreadCrumb";
 import SectionHeader from "../Components/Modules/SectionHeader";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { AppDispatch } from "../Redux/store";
+import { addContactToServer } from "../Redux/store/contacts";
+import swal from "sweetalert";
+
+interface ContactForm {
+  id?: string;
+  subject: string;
+  email: string;
+  body: string;
+}
 
 const Contactus = () => {
+  const dispatch = useDispatch<AppDispatch>();
+  const [contactForm, setContactForm] = useState<ContactForm>({
+    subject: "",
+    email: "",
+    body: "",
+  });
+
+  const handleInputChange = (
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = event.target;
+    setContactForm((prevContactForm) => ({
+      ...prevContactForm,
+      [name]: value,
+    }));
+  };
+
+  const sendMessage = (event: React.FormEvent) => {
+    event.preventDefault();
+    const data = dispatch(
+      addContactToServer({
+        id: crypto.randomUUID(),
+        subject: contactForm.subject,
+        email: contactForm.email,
+        body: contactForm.body,
+      })
+    );
+    console.log(data);
+    swal({
+      title: "پیام شما با موفقیت ارسال شد.",
+      icon: "success",
+      buttons: ["OK", "بستن"],
+    }).then(() => {
+      setContactForm({
+        subject: "",
+        email: "",
+        body: "",
+      });
+    });
+  };
+
   return (
     <div className="container">
       <BreadCrumb route="ارتباط با ما" />
@@ -19,22 +72,32 @@ const Contactus = () => {
 
           <form action="" className="flex flex-col gap-8">
             <input
+              name="subject"
               type="text"
               className="p-6 shadow-lg rounded-full text-stone-800 focus:border-b-2 focus:border-stone-800 duration-200"
               placeholder="موضوع پیام"
+              value={contactForm.subject}
+              onChange={handleInputChange}
             />
             <input
+              name="email"
               type="text"
               className="p-6 shadow-lg rounded-full text-stone-800 focus:border-b-2 focus:border-stone-800 duration-200"
               placeholder="پست الکترونیکی:"
+              value={contactForm.email}
+              onChange={handleInputChange}
             />
             <textarea
+              name="body"
               className="p-6 shadow-lg rounded-[2rem] text-stone-800 min-h-40 max-h-60 focus:border-b-2 focus:border-stone-800 duration-200"
               placeholder="متن پیام را بنویسید..."
+              value={contactForm.body}
+              onChange={handleInputChange}
             ></textarea>
             <button
               type="submit"
               className="self-start bg-stone-800 text-white py-4 px-8 rounded-full cursor-pointer hover:bg-orange-200 hover:text-stone-800 duration-300"
+              onClick={sendMessage}
             >
               ارسال پیام
             </button>
