@@ -171,3 +171,8 @@ a {
   color: #000050 !important;
   width: 10rem
 }
+
+.swal_footer {
+  display: flex;
+  justify-content: center;
+}
