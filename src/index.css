@@ -180,3 +180,12 @@ a {
   width: 100%;
 }
 
+
+.swal_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: green;
+  width: 100%;
+}
+
