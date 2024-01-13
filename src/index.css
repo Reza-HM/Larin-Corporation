@@ -189,3 +189,11 @@ a {
   width: 100%;
 }
 
+.swal_body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: green;
+  width: 100%;
+}
+
