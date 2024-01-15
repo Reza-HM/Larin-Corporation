@@ -13,7 +13,7 @@ const Questions = () => {
   const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
-    dispatch(getQuestionsFromServer("http://localhost:3000/questions"));
+    dispatch(getQuestionsFromServer("https://larin-corporation.vercel.app/api/questions"));
   }, [dispatch]);
 
   return (

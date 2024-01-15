@@ -20,7 +20,7 @@ const Navbar = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const res = await fetch("http://localhost:3000/users");
+        const res = await fetch("https://larin-corporation.vercel.app/api/users");
         const result: User[] = await res.json();
         setUsers(result);
       } catch (error) {

@@ -11,7 +11,7 @@ const Services = () => {
   const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
-    dispatch(getServicesFromServer("http://localhost:3000/services"));
+    dispatch(getServicesFromServer("https://larin-corporation.vercel.app/api/services"));
   }, [dispatch]);
 
   return (

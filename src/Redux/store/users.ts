@@ -10,7 +10,7 @@ interface User {
 export const registerUser = createAsyncThunk<User, User>(
   "users/registerUser",
   async (newUser: User) => {
-    const response = await fetch("http://localhost:3000/users", {
+    const response = await fetch("https://larin-corporation.vercel.app/api/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -35,7 +35,7 @@ export const loginUser = createAsyncThunk<
 >(
   "users/loginUser",
   async (credentials: { username: string; password: string }) => {
-    const response = await fetch("http://localhost:3000/users");
+    const response = await fetch("https://larin-corporation.vercel.app/api/users");
     const data = await response.json();
     const user = data.find(
       (user: User) =>
@@ -46,7 +46,7 @@ export const loginUser = createAsyncThunk<
     if (user) {
       const newToken = crypto.randomUUID();
 
-      await fetch(`http://localhost:3000/users/${user.id}`, {
+      await fetch(`https://larin-corporation.vercel.app/api/users/${user.id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",

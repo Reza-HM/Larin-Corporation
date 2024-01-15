@@ -19,7 +19,7 @@ export const getContactsFromServer = createAsyncThunk<Contact[], string>(
 export const addContactToServer = createAsyncThunk<Contact, Contact>(
   "contacts/addContactToServer",
   async (newContact: Contact) => {
-    const response = await fetch("http://localhost:3000/contacts", {
+    const response = await fetch("https://larin-corporation.vercel.app/api/contacts", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -9,7 +9,7 @@ const Blog = () => {
   const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
-    dispatch(getArticlesFromServer("http://localhost:3000/blog"));
+    dispatch(getArticlesFromServer("https://larin-corporation.vercel.app/api/blog"));
   }, [dispatch]);
 
   return (
