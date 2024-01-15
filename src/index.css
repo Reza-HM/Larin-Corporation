@@ -169,39 +169,5 @@ a {
 .swiper-button-prev,
 .swiper-button-next {
   color: #000050 !important;
-  width: 10rem
+  width: 10rem;
 }
-
-.swal_footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: green;
-  width: 100%;
-}
-
-
-.swal_header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: green;
-  width: 100%;
-}
-
-.swal_body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: green;
-  width: 100%;
-}
-
-.swal_text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: green;
-  width: 100%;
-}
-
